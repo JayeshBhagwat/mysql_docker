@@ -1,8 +1,7 @@
-FROM ubuntu:latest
+FROM mysql/mysql-server
 
-RUN apt-get update; apt-get install mysql-server -y
+copy ./script.sql /docker-entrypoint-initdb.d/
 
-ADD ./test.sql /tmp/test.sql
 
 
 
