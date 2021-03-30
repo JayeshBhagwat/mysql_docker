@@ -1,0 +1,20 @@
+version: "2"
+services:
+    cluster-1:
+        container_name: cluster-1
+        build: .
+        ports:
+          ["4000:3306"]
+    
+    cluster-2:
+        container_name: cluster-2
+        build: .
+        ports:
+            ["5000:3306"]
+
+    cluster-3:
+        container_name: cluster-3
+        build: .
+        ports:
+            ["6000:3306"] 
+2
